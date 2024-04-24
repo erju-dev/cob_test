@@ -48,10 +48,6 @@
 
               *> a switch statment
               EVALUATE TRUE
-                WHEN NUM1 < 2
-                  DISPLAY 'NUM1 LESS THAN 2'
-                WHEN NUM1 < 19
-                  DISPLAY 'NUM1 LESS THAN 19'
                 WHEN NUM1 < 1000
                   DISPLAY 'NUM1 LESS THAN 1000'
               END-EVALUATE.
