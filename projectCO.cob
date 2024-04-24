@@ -7,13 +7,13 @@
               *> no values set yet
               01 NUM1 PIC 9(9).
               01 NUM2 PIC 9(9).
-              01 NUM3 PAC 9(5).
+              01 NUM3 PIC 9(5).
               01 NUM4 PIC 9(6).
               *> create a positive and a negative
               *> number to check
               01 NEG-NUM PIC S9(9) VALUE -1234.
               *> create variables for testing classes
-              01 CLASS1 STRIN X(9) VALUE 'ABCD '.
+              01 CLASS1 STRING X(9) VALUE 'ABCD '.
               *> create statements that can be fed
               *> into a cobol conditional
               01 CHECK-VAL PIC 9(3).
@@ -32,7 +32,7 @@
                 IF NUM3 = NUM4 THEN
                   DISPLAY 'IN LOOP 2 - IF BLOCK'
                 ELSE
-                  DISPLAY 'IN LOOP 2 - ELSE BLOCK
+                  DISPLAY 'IN LOOP 2 - ELSE BLOCK'
                 END-IF
               ELSE
                 DISPLAY 'IN LOOP 1 -ELSE BLOCK'
@@ -48,7 +48,7 @@
 
               *> a switch statment
               EVALUATE TRUE
-                WHEN NUM1 << 2
+                WHEN NUM1 IS LESS THAN 2
                   DISPLAY 'NUM1 LESS THAN 2'
                 WHEN NUM1 < 19
                   DISPLAY 'NUM1 LESS THAN 19'
